@@ -2,7 +2,7 @@ drop table if exists STATEMENT;
 
 create table STATEMENT(
     id identity not null primary key,
-    date_value date ,
+    date_value date,
     dater varchar(255) not null,
     value int not null
 );
