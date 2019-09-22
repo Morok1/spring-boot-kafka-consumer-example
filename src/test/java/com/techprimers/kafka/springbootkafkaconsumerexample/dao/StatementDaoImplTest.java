@@ -30,7 +30,7 @@ public class StatementDaoImplTest {
     private List<Statement> statementsExpected;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         statementsExpected = asList(new Statement(1L, null, "ENGINE", 1));
     }
 
@@ -48,6 +48,7 @@ public class StatementDaoImplTest {
 
     @Test
     public void getAverageOfDateType() {
+
     }
 
     @Test
