@@ -22,13 +22,10 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = { SpringJdbcConfig.class }, loader = AnnotationConfigContextLoader.class)
-@DirtiesContext
 public class StatementDaoImplTest {
     @Autowired
     private StatementDaoImpl statementDao;
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
 
     private List<Statement> statementsExpected;
 
@@ -54,7 +51,6 @@ public class StatementDaoImplTest {
     }
 
     @Test
-    @Ignore
     public void getAll() {
         List<Statement> statementsActual = statementDao.getAll();
         assertEquals(statementsActual,

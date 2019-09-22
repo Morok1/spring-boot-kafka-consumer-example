@@ -3,6 +3,7 @@ package com.techprimers.kafka.springbootkafkaconsumerexample.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -18,7 +19,7 @@ public class SpringJdbcConfig {
                 .addScript("classpath:testSchema.sql").build();
     }
 
-    // @Bean
+//    @Bean
     public DataSource mysqlDataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
@@ -28,4 +29,5 @@ public class SpringJdbcConfig {
 
         return dataSource;
     }
+
 }
